@@ -8,28 +8,35 @@ import Link from "next/link";
 import{useSession} from "next-auth/react"
 import Router from 'next/router';
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/test/get");
-  const data = await res.json();
-  const paths = data.map((estate) => ({
-    params: { id: estate.category },
-  }));
+import { connectMongo } from "../../utils/connectMongo";
+import Insert from "../../models/upload";
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+export async function getServerSideProps(context) {
+  const { id } = context.params; // Use `context.params` to get dynamic params
 
-export const getStaticProps = async ({ params }) => {
-  const res = await fetch(`http://localhost:3000/api/estates/${params.id}`);
-  const data = await res.json();
+  try {
+    await connectMongo();
 
-  return {
-    props: { estates: data },
-    revalidate: 1,
-  };
-};
+    console.log("connecting to document.....");
+
+    const estates = await Insert.find({category: id }).select(
+      "_id title price image location agent slug createdAt "
+    );
+    if (estates) {
+      console.log(estates);
+    } else {
+      console.log("something went wrong");
+    }
+    console.log("Document fetched succesfully....");
+
+    console.log(estates);
+    return {
+      props: { estates: JSON.parse(JSON.stringify(estates)) },
+    };
+  } catch (error) {
+    //errorHandler(error, res);
+  }
+}
 
 const Estates = ({ estates }) => {
 
@@ -68,7 +75,7 @@ const Estates = ({ estates }) => {
       // call backend code for deleting
       try {
         console.log(formValues);
-        const res = await fetch(`http://localhost:3000/api/edit/${updateId}`, {
+        const res = await fetch(`/api/edit/${updateId}`, {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -110,7 +117,7 @@ const Estates = ({ estates }) => {
 
         try {
           const res = await fetch(
-            `http://localhost:3000/api/delete/${deleteId}`,
+            `/api/delete/${deleteId}`,
             {
               method: "DELETE",
             }
@@ -214,12 +221,13 @@ const Estates = ({ estates }) => {
                 </td>
                 <td className="p-3  py-6 text-sm text-gray-700 whitespace-nowrap">
                 <Link href={`/desc/${estate._id}`}>
-                <img
+                <Image
               className="w-full shadow-xl h-20
                group-hover:opacity-10 object-fill hover:scale-105 ease in duration-300 md:object-fill rounded"
               src={estate.image}
-              width={900}
-              height={500}
+              width={300}
+              height={200}
+              alt=""
             />
                   </Link>
                 </td>

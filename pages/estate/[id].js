@@ -1,27 +1,35 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"
+import { connectMongo } from "../../utils/connectMongo";
+import Insert from "../../models/upload";
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/test/get");
-  const data = await res.json();
-  const paths = data.map((estate) => ({
-    params: { id: estate.category },
-  }));
+export async function getServerSideProps(context) {
+  const { id } = context.params; // Use `context.params` to get dynamic params
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+  try {
+    await connectMongo();
 
-export const getStaticProps = async ({ params }) => {
-  const res = await fetch(`http://localhost:3000/api/estates/${params.id}`);
-  const data = await res.json();
+    console.log("connecting to document.....");
 
-  return {
-    props: { estates: data },
-  };
-};
+    const estates = await Insert.find({category: id }).select(
+      "_id title price image location slug desc"
+    );
+    if (estates) {
+      console.log(estates);
+    } else {
+      console.log("something went wrong");
+    }
+    console.log("Document fetched succesfully....");
+
+    console.log(estates);
+    return {
+      props: { estates: JSON.parse(JSON.stringify(estates)) },
+    };
+  } catch (error) {
+    //errorHandler(error, res);
+  }
+}
 
 const Estate = ({ estates }) => {
   return (
@@ -38,11 +46,11 @@ const Estate = ({ estates }) => {
               key={estate._id}
             >
               <Link href={`/desc/${estate._id}`}>
-                <img
+                <Image
                   className="w-full shadow h-48 
                  group-hover:opacity-10 object-fill hover:scale-105 ease in duration-300 md:object-fill"
                   src={estate.image}
-                  alt="/"
+                  alt=" "
                   width={500}
                   height={300}
                 />
@@ -52,6 +60,7 @@ const Estate = ({ estates }) => {
                   {estate.title}
                 </h4>
                 <p className="pb-4  text-black ">{estate.location}</p>
+                <p className="pb-4  text-black ">{estate.slug}</p>
                 <p className="pb-4  text-black ">{estate.price}</p>
               </div>
             </div>

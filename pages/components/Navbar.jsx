@@ -109,7 +109,7 @@ const Navbar = () => {
             <div className="border-b border-orange-400 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
                 {" "}
-                Let’s find a<span className="text-[#fd7e14]"> home</span> that's
+                Let&apos;s find a<span className="text-[#fd7e14]"> home</span> that&apos;s
                 perfect for you
               </p>
             </div>

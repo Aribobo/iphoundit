@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 const Modal = ({ open, onClose }) => {
-  if (!open) return null;
+ 
   // const [image, setImage] = useState(null);
   const [imageInput, setImageInput] = useState(null);
   const [title, setTitle] = useState("");
@@ -13,7 +13,6 @@ const Modal = ({ open, onClose }) => {
   const [slug, setSlug] = useState("");
   const [desc, setDesc] = useState("");
   const [category, setCategory] = useState("");
-  const [loading, setLoader] = useState(false);
   const handleImage = (e) => {
     const file = e.target.files[0];
     setImageInput(file);
@@ -46,7 +45,7 @@ const Modal = ({ open, onClose }) => {
         Headers: { "Content-Type": "multipart/form-data" },
       });
       if (result) {
-        setLoader(false);
+       
         Swal.fire("Good job!", "Uploaded Succesfully", "success");
        
       }
@@ -56,6 +55,7 @@ const Modal = ({ open, onClose }) => {
       console.log(error);
     }
   };
+  if (!open) return null;
 
   return (
     <div id="skills" className="w-full lg:h-screen p-2 ">
@@ -147,7 +147,7 @@ const Modal = ({ open, onClose }) => {
                 type="submit"
                 className=" bg-green-700 w-full p-4 text-gray-100 mt-4"
               >
-               {loading ? "Uploading...." : "Upload"} 
+               Upload 
               </button>
             </form>
           </div>

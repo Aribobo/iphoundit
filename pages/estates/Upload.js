@@ -3,16 +3,36 @@ import Dashnav from '../components/Dashnav';
 import Modal from '../components/Modal';
 import{useSession} from "next-auth/react"
 import Router from 'next/router';
+import Image from "next/image"
+import { connectMongo } from "../../utils/connectMongo";
+import Insert from "../../models/upload";
 
- export const getStaticProps = async(ctx) =>{
-        const res = await fetch('http://localhost:3000/api/test/get');
-        const data = await res.json();
-   
-     return{
-         props:{
-             inserts:data},
-      }
-};
+export async function getServerSideProps(context) {
+  const { id } = context.params; // Use `context.params` to get dynamic params
+
+  try {
+    await connectMongo();
+
+    console.log("connecting to document.....");
+
+    const inserts = await Insert.find({category: id }).select(
+      "_id title price image location agent slug createdAt "
+    );
+    if (inserts) {
+      console.log(inserts);
+    } else {
+      console.log("something went wrong");
+    }
+    console.log("Document fetched succesfully....");
+
+    console.log(inserts);
+    return {
+      props: { inserts: JSON.parse(JSON.stringify(inserts)) },
+    };
+  } catch (error) {
+    //errorHandler(error, res);
+  }
+}
 
 
 const Rent = ({ inserts}) => {
@@ -67,8 +87,8 @@ const Rent = ({ inserts}) => {
              <td className='p-3  py-6 text-sm text-gray-700 whitespace-nowrap'> {insert.agent}</td>
              <td className='p-3  py-6 text-sm text-gray-700 whitespace-nowrap'> {insert.slug} </td>
              <td className='p-3  py-6 text-sm text-gray-700 whitespace-nowrap'> 
-             < img src ={`/assets/${insert.image}` }  width={125} height={50} /></td>
-             <td className='p-3  py-6 text-sm text-gray-700 whitespace-nowrap'>  24/3/2022 </td>
+                                        <Image src ={insert.image}  width={125} height={50} alt="" /></td>
+             <td className='p-3  py-6 text-sm text-gray-700 whitespace-nowrap'> {insert.createdAt} </td>
              <td className='p-3  py-6 text-sm text-gray-700 whitespace-nowrap'> <button className='bg-blue-700 text-white font-bold py-2 px-4 rounded'>Edit</button></td>
              <td className='p-3  py-6 text-sm text-gray-700 whitespace-nowrap'> <button className='bg-red-700 text-white font-bold py-2 px-4 rounded'>Delete</button>  </td>  
          </tr>

@@ -10,25 +10,25 @@ const Rent = () => {
           <Rentitems
             title="House For Sale"
             backgroundImg="house4.jpg"
-            projectUrl="/estate/House"
+            projectUrl="estate/House"
           
           />
           <Rentitems
             title="House To Rent"
             backgroundImg="house.jpg"
-            projectUrl="/estate/Rent"
+            projectUrl="estate/Rent"
            
           />
           <Rentitems
             title="Shop To Let"
             backgroundImg="house5.jpg"
-            projectUrl="/estate/Shop"
+            projectUrl="estate/Shop"
            
           />
            <Rentitems
             title="Land For Sale"
             backgroundImg="house6.jpg"
-            projectUrl="/estate/Land"
+            projectUrl="estate/Land"
              
           />
         </div>

@@ -8,7 +8,7 @@ const About = () => {
           <p className="uppercase text-xl tracking-widest text-[#fd7e14]">
             About Us
           </p>
-          <h2 className="py-4 ">Who are we?</h2>
+          <h2 className="py-4 ">Who are we ?</h2>
           <p className="py-2 text-gray-600">
             Iphoundit is an online place which helps individual with the service of sales and Rental of Property.
             Based in Enugu Nigeria.
