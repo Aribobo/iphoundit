@@ -10,17 +10,17 @@ providers:[
     CredentialsProvider({
         type:"credentials",
         credentials:{
-            // email:{label:"Email",type:"email",placeholder:"john@gmail.com"},
-            // password:{label:"Password",type:"password",placeholder:"********"},
         },
         async authorize(credentials,req) {
             const{email,password} = credentials;
-            if(email!=="john@gmail.com"||password!=="johns-password")
+            if(email!==process.env.email || password!==process.env.password)
                  throw new Error('invalid credentials');
             
-            if( email=="john@gmail.com"&& password=="johns-password");
+            if( email==process.env.email && password==process.env.password);
 
-           return{id:"1234", name: "John Doe ", email:"john@gmail.com"} ; 
+           return{
+            id:"1996", name: "Balaga Effect ", email: "fakeemail@balaga.com"
+        } ; 
             
         }
     })
