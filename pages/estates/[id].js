@@ -221,7 +221,7 @@ const Estates = ({ estates }) => {
                 </td>
                 <td className="p-3  py-6 text-sm text-gray-700 whitespace-nowrap">
                 <Link href={`/desc/${estate._id}`}>
-                <Image
+                <img 
               className="w-full shadow-xl h-20
                group-hover:opacity-10 object-fill hover:scale-105 ease in duration-300 md:object-fill rounded"
               src={estate.image}

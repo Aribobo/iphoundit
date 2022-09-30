@@ -116,22 +116,22 @@ const Dashnav = () => {
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
               <Link href="/estates/House">
-                <li className="py-4 text-sm" onClick={() => setNav(false)}>
+                <li className="py-4 text-md" onClick={() => setNav(false)}>
                   House
                 </li>
               </Link>
               <Link href="/estates/Rent">
-                <li className="py-4 text-sm" onClick={() => setNav(false)}>
+                <li className="py-4 text-md" onClick={() => setNav(false)}>
                   Rent
                 </li>
               </Link>
               <Link href="/estates/Land">
-                <li className="py-4 text-sm" onClick={() => setNav(false)}>
+                <li className="py-4 text-md" onClick={() => setNav(false)}>
                   Land
                 </li>
               </Link>
               <Link href="/estates/Shop">
-                <li className="py-4 text-sm" onClick={() => setNav(false)}>
+                <li className="py-4 text-md" onClick={() => setNav(false)}>
                   Shop
                 </li>
               </Link>

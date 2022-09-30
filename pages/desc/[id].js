@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { connectMongo } from "../../utils/connectMongo";
 import Insert from "../../models/upload";
@@ -40,7 +39,7 @@ const Desc = ({ estates }) => {
         >
           <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] md:h-[50vh] sm:h-[40vh] md:mb-4" />
 
-          <Image
+          <img
             src={estate.image}
             className="absolute z-1 object-cover h-full w-full"
             height={300}
@@ -58,7 +57,7 @@ const Desc = ({ estates }) => {
       <div className="grid lg:grid-cols-2 gap-8 mt-10 px-8 mb-20">
         {estates.map((estate) => (
           <div key={estate._id}>
-            <Image
+            <img
               className="w-full shadow-xl h-50 
                group-hover:opacity-10 object-fill hover:scale-105 ease in duration-300 md:object-fill rounded"
               src={estate.image}

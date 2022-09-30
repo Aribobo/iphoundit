@@ -10,7 +10,7 @@ const Footer = () => {
 	return (
 		<>
 			<div  id="footer"className=" shadow-xl
-        shadow-gray-400 rounded  bg-gray-50 h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20">
+        shadow-gray-400 rounded  bg-[#e5e7eb] h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20">
 				<div className="p-5 ">
 					<ul><Link href="/#home">
 						<p className="text-gray-800 font-bold text-3xl pb-6">
@@ -27,7 +27,7 @@ const Footer = () => {
 				</div>
 				<div className="p-5">
 					<ul>
-						<p className=" font-bold text-2xl pb-4 text-[#fd7e14]">Categories</p>
+						<p className=" font-bold text-2xl pb-4 text-[#fd7e14]">PROPERTIES</p>
 						<Link href="/estate/Land">
 						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
 							Lands For Sale
@@ -52,7 +52,7 @@ const Footer = () => {
 				</div>
 				<div className="p-5">
 					<ul>
-						<p className="font-bold text-2xl pb-4 text-[#fd7e14]">Contact</p>
+						<p className="font-bold text-2xl pb-4 text-[#fd7e14]">CONTACT</p>
 						<li className="text-gray-500 text-md  font-semibold py-2 flex ">
 						+2349063899239
 						
@@ -68,7 +68,7 @@ const Footer = () => {
 				</div>
 				
 			</div>
-			<div className="flex flex-col justify-center items-center text-center  p-5 bg-gray-50">
+			<div className="flex flex-col justify-center items-center text-center  p-5 bg-[#e5e7eb]">
 				<h5 className=" text-gray-800 font-semibold">
 					© 2022  Iphound<span className="text-[#fd7e14]">It</span> || All rights reserved
 				

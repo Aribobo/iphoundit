@@ -13,6 +13,9 @@ const Modal = ({ open, onClose }) => {
   const [slug, setSlug] = useState("");
   const [desc, setDesc] = useState("");
   const [category, setCategory] = useState("");
+  const [loading, setLoader] = useState(false);
+  
+
   const handleImage = (e) => {
     const file = e.target.files[0];
     setImageInput(file);
@@ -45,18 +48,17 @@ const Modal = ({ open, onClose }) => {
         Headers: { "Content-Type": "multipart/form-data" },
       });
       if (result) {
-       
+        setLoader(false);
         Swal.fire("Good job!", "Uploaded Succesfully", "success");
-       
+        
       }
       console.log({ result });
     } catch (error) {
-      Swal.fire("Error!", "Failed to Upload", "question");
+      Swal.fire("Error!", "Failed to Upload", "error");
       console.log(error);
     }
   };
   if (!open) return null;
-
   return (
     <div id="skills" className="w-full lg:h-screen p-2 ">
       <div className="max-w-[800px] mx-auto flex flex-col justify-center text-center h-full mt-20">
@@ -147,7 +149,7 @@ const Modal = ({ open, onClose }) => {
                 type="submit"
                 className=" bg-green-700 w-full p-4 text-gray-100 mt-4"
               >
-               Upload 
+               {loading ? "Uploading...." : "Upload"} 
               </button>
             </form>
           </div>
