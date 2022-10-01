@@ -3,7 +3,7 @@
 
  export default NextAuth({
 session:{
-    strategy:"jwt",
+    jwt:true,
 },
 
 providers:[
@@ -28,6 +28,6 @@ providers:[
 pages:{
     signIn:"/auth/signin"
 },
-
+secret:process.env.NEXTAUTH_SECRET
 
  })
