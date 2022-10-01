@@ -8,24 +8,24 @@ const About = () => {
           <p className="uppercase text-xl tracking-widest text-[#fd7e14]">
             About Us
           </p>
-          <h2 className="py-4 ">Who are we ?</h2>
+          <h2 className="py-4 ">Who are we? </h2>
           <p className="py-2 text-gray-600">
-            Iphoundit is an online place which helps individual with the service of sales and Rental of Property.
-            Based in Enugu Nigeria.
+            Iphoundit is an online place which help individuals with the service of Sales and Rental of Properties
+            based in Enugu, Nigeria.
             we provide users with the best property search experience both online and offline with property listings
-           like homes, houses, lands, shops, office spaces and other commercial properties,
+           like homes, houses, lands, shops, office spaces and other commercial properties.
           </p>
           <p className="py-2 text-gray-600">
           we ensure all the Properties listed are verified to ensure listings pictures and description are the same as 
           real life.
           </p>
           <p className="py-2 text-gray-600">
-           we make finding right property easy in 2 ways
-           <br/>
-           1.Browse through the amazing and verified listing and read through  the property description
-           <br/>
-           2.Use either of the buttons to call or chat us up regarding the  property.
+           we make finding right property easy in 2 ways;
            
+           <br/>
+           1.Browse through the amazing and verified listing and read through  the property descriptions.
+           <br/>
+           2.Use either of the buttons to call or chat us up regarding the property.
             
           </p>
       
