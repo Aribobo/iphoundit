@@ -60,7 +60,7 @@ const Estate = ({ estates }) => {
                 </h4>
                 <p className="pb-2  text-black text-xl">{estate.location}</p>
                 <p className="pb-2  text-black text-xl ">{estate.slug}</p>
-                <p className="pb-2  text-black text-xl">{estate.price}</p>
+                <p className="pb-2  text-black text-xl">NGN {estate.price}</p>
               </div>
             </div>
           ))}
