@@ -60,8 +60,8 @@ const handler = nc({
 
     console.log('connecting to document.....');
 
-    const url = result?.secure_url;
-    const public_id =  result?.public_id;
+    const url = result.secure_url;
+    const public_id =  result.public_id;
     const insert = Insert({
       ...req.body,
       image: url,
