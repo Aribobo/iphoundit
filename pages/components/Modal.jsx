@@ -58,7 +58,7 @@ const Modal = ({ open, onClose }) => {
       console.log(error);
     }
   };
-  if (!open) return null;
+if (!open) return null;
   return (
     <div id="skills" className="w-full lg:h-screen p-2 ">
       <div className="max-w-[800px] mx-auto flex flex-col justify-center text-center h-full mt-20">

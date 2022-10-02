@@ -63,11 +63,11 @@ const handler = nc({
     const url = result.secure_url;
     const public_id =  result.public_id;
     const insert = Insert({
-      ...req.body,
+      ...req?.body,
       image: url,
       cloudinary_id: public_id,  
     });
-    await insert.save();
+    await insert?.save();
     console.log({ insert });
     console.log("saved succesfully!!!!!");
   });
