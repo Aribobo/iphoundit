@@ -48,10 +48,10 @@ const handler = nc({
      
   )
   .post(async (req, res) => {
-    const result = await cloudinary.uploader?.upload(req.file.path)
+   
     // res.status(201)
     //   .json({ body: req.body, files: req.file, insert: req.body });
-     res.json (result);
+     
     await connectMongo();
  
     console.log("connecting  to mongodb");
@@ -60,12 +60,13 @@ const handler = nc({
 
     console.log('connecting to document.....');
 
-    const url = result?.secure_url;
-    const public_id =  result?.public_id;
+    const result = await cloudinary.uploader?.upload(req.file.path)
+    res.json (result);
+  
     const insert = Insert({
       ...req?.body,
-      image: url,
-      cloudinary_id: public_id,  
+      image: result?.secure_url,
+      cloudinary_id: result?.public_id,  
     });
     await insert?.save();
     console.log({ insert });
