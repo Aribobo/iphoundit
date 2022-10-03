@@ -35,7 +35,7 @@ const Footer = () => {
 						</Link>
 						<Link href="/estate/Rent">
 						<li className="text-gray-700 text-xl pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
-							House To Rent
+							House For Rent
 						</li>
 						</Link>
 						<Link href="/estate/Shop">
