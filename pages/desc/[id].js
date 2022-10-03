@@ -67,23 +67,25 @@ const Desc = ({ estates }) => {
             />
           </div>
         ))}
-        <div className="max-w-[1240px] max-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
+        <div className="max-w-[1240px] max-auto p-2 grid md:grid-cols-2 gap-6 pt-20 px-4">
           {estates.map((estate) => (
             <div className="col-span-4" key={estate._id}>
               <h2>Description</h2>
               <br />
               <p>{estate.desc}</p>
+              <div className="grid grid-cols-2 md:grid-cols-2">
               <a href="tel:+2349063899239">
                 {" "}
-                <button className="px-8 py-2 mt-4 mr-8 bg-green-700 text-white font-bold rounded mb-3">
-                  Call
+                <button className="px-8 py-2 mt-4 mr-8 bg-[#2b2a2a] text-[#e5e7eb] font-bold rounded mb-3">
+                  Call Us
                 </button>
               </a>
               <a href=" https://wa.me/+2349063899239">
-                <button className="px-8 py-2 mt-4 mr-8 bg-[#fd7e14] text-white font-bold rounded mb-3">
+                <button className="px-8 py-2 mt-4 mr-8 bg-[#2b2a2a] text-[#e5e7eb] font-bold rounded mb-3">
                   Chat Us
                 </button>
               </a>
+              </div>
 
               {/* <Link href="/#project">
                 <p className="underline cursor-pointer">Back</p>
