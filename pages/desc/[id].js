@@ -72,7 +72,7 @@ const Desc = ({ estates }) => {
             <div className="col-span-4" key={estate._id}>
               <h2>Description</h2>
               <br />
-              <p>{estate.desc}</p>
+              <p className="text-2xl">{estate.desc}</p>
               <div className="grid grid-cols-2 md:grid-cols-2">
               <a href="tel:+2349063899239">
                 {" "}
