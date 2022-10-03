@@ -58,8 +58,6 @@ const handler = nc({
 
     console.log("connected to mongodb !!!!");
 
-    console.log('connecting to document.....');
-
     const result = await cloudinary.uploader?.upload(req.file.path)
     res.json (result);
   

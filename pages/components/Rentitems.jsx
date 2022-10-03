@@ -18,7 +18,7 @@ const Rentitems = ( {title,backgroundImg,projectUrl} ) => {
         </h3>
        <br/>
         <Link href={`/${projectUrl}`}>
-          <p className="text-center py-3 rounded-lg bg-[#e5e7eb] text-gray-700 font-bold text-xl">
+          <p className="text-center py-3 rounded-lg bg-[#e5e7eb] text-gray-700 font-bold">
           {title}
           </p>
         </Link>
