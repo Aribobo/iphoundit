@@ -29,22 +29,22 @@ const Footer = () => {
 					<ul>
 						<p className=" font-bold text-2xl pb-4 text-[#fd7e14]">PROPERTIES</p>
 						<Link href="/estate/Land">
-						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
+						<li className="text-gray-700 text-xl pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
 							Lands For Sale
 						</li>
 						</Link>
 						<Link href="/estate/Rent">
-						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
+						<li className="text-gray-700 text-xl pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
 							House To Rent
 						</li>
 						</Link>
 						<Link href="/estate/Shop">
-						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
+						<li className="text-gray-700 text-xl pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
 							Shop To Let
 						</li>
 						</Link>
 						<Link href="/estate/House">
-						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
+						<li className="text-gray-700 text-xl pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
 							House For Sale
 						</li>
 						</Link>
@@ -53,14 +53,14 @@ const Footer = () => {
 				<div className="p-5">
 					<ul>
 						<p className="font-bold text-2xl pb-4 text-[#fd7e14]">CONTACT</p>
-						<li className="text-gray-500 text-md  font-semibold py-2 flex ">
+						<li className="text-gray-700 text-xl  font-semibold py-2 flex ">
 						+2349063899239
 						
 						</li>
-						<li className="text-gray-500 text-md  font-semibold py-2 flex ">
+						<li className="text-gray-700 text-xl  font-semibold py-2 flex ">
 						No 56 Ibagwa Road Nsukka 
 						</li>
-						<li className="text-gray-500 text-md  font-semibold py-2 flex ">
+						<li className="text-gray-700 text-xl  font-semibold py-2 flex ">
 						Stboystan@gmail.com
 						</li>
 						
