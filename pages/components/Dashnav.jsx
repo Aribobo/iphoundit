@@ -94,7 +94,7 @@ const Dashnav = () => {
           <div>
             <div className="flex w-full items-center justify-between">
             <Link href="/estates/Dashboard">
-            <p className="text-gray-800 font-bold text-3xl pb-6 hover:cursor-pointer">
+            <p className="text-gray-800 font-bold text-3xl pb-6 hover:cursor-pointer"  onClick={() => setNav(false)}>
 							Iphound<span className="text-[#fd7e14]">It</span>
 						</p>
             </Link>

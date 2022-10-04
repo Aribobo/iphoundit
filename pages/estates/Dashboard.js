@@ -44,7 +44,7 @@ import Image from "next/image"
         <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
         
-            <Image className=' ' src='/rent.png' width='64px'
+            <Image className=' ' src='/rent1.png' width='64px'
            height='64px' alt=''/>
         
             </div>
