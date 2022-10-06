@@ -43,7 +43,7 @@ const Estate = ({ estates }) => {
         <div className="grid rows-3 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
           {estates.map((estate) => (
             <div
-              className=" bg-[#e5e7eb] shadow-gray-600 rounded overflow-hidden shadow-xl"
+              className=" bg-[#e5e7eb] shadow-gray-600 rounded-xl overflow-hidden shadow-xl"
               key={estate._id}
             >
               <Link href={`/desc/${estate._id}`}>

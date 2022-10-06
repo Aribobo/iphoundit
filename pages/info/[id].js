@@ -93,9 +93,9 @@ const Info = ({ estates }) => {
               <p className="text-2xl">{estate.desc}</p>
               <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mt-8">
               <h3 className="p-2">TITLE: <span className="text-[#fd7e14]">{estate.title}</span></h3>
-              <h3 className="p-2">AGENT:<span className="text-[#fd7e14]"> {estate.agent}</span></h3>
+              <h3 className="p-2">AGENT: <span className="text-[#fd7e14]"> {estate.agent}</span></h3>
               <h3 className="p-2">LOCATION: <span className="text-[#fd7e14]">{estate.location}</span></h3>
-              <h3 className="p-2">PRICE:<span className="text-[#fd7e14]"> {estate.price}</span></h3>
+              <h3 className="p-2">PRICE: <span className="text-[#fd7e14]">NGN  {estate.price}</span></h3>
               <h3 className="p-2">KEY: <span className="text-[#fd7e14]">{estate.slug}</span></h3>
               <h3 className="p-2">DATE: <span className="text-[#fd7e14]">{estate.createdAt}</span></h3>
 
