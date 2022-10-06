@@ -10,9 +10,8 @@ const Main = () => {
             You <span className="text-[#fd7e14]">Deserve</span> a 
             <span className="text-[#fd7e14]"> Home</span>
           </h1>
-          <h2 className="uppercase text-sm tracking-widest text-black">
-            Let&apos;s find a <span className="text-[#fd7e14]"> home</span> that&apos;s
-            perfect for you
+          <h2 className="uppercase text-sm tracking-widest text-black p-2">
+            Let&apos;s help you find <span className="text-[#fd7e14]">it</span>
           </h2>
         </div>
       </div>
