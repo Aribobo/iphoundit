@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Dashnav from "../components/Dashnav";
-import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import Swal from "sweetalert2";
 import Image from "next/image";
@@ -220,13 +219,13 @@ const Estates = ({ estates }) => {
                   {estate.slug}
                 </td>
                 <td className="p-3  py-6 text-sm text-gray-700 whitespace-nowrap">
-                <Link href={`/desc/${estate._id}`}>
-                <img 
-              className="w-full shadow-xl h-20
+                <Link href={`/info/${estate._id}`}>
+                <Image
+              className="w-full shadow-xl
                group-hover:opacity-10 object-fill hover:scale-105 ease in duration-300 md:object-fill rounded"
               src={estate.image}
-              width={300}
-              height={200}
+              width={200}
+              height={100}
               alt=""
             />
                   </Link>

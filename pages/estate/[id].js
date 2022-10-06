@@ -25,9 +25,10 @@ export async function getServerSideProps(context) {
     console.log(estates);
     return {
       props: { estates: JSON.parse(JSON.stringify(estates)) },
+      
     };
   } catch (error) {
-    //errorHandler(error, res);
+    
   }
 }
 
@@ -46,12 +47,13 @@ const Estate = ({ estates }) => {
               key={estate._id}
             >
               <Link href={`/desc/${estate._id}`}>
-                <img
-                  className="w-full shadow h-48 
+                <Image
+                  className="w-full shadow 
                  group-hover:opacity-10 object-fill hover:scale-105 ease in duration-300 md:object-fill"
                   src={estate.image}
                   alt=" "
-                  
+                  width={900}
+              height={600} 
                 />
               </Link>
               <div className="p-6  rounded-xl ">

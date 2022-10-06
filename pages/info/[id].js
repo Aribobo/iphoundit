@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { connectMongo } from "../../utils/connectMongo";
 import Insert from "../../models/upload";
+import Dashnav from "../components/Dashnav";
+import{useSession} from "next-auth/react"
+import Router from 'next/router';
 
 export async function getServerSideProps(context) {
   const { id } = context.params; // Use `context.params` to get dynamic params
@@ -12,7 +15,7 @@ export async function getServerSideProps(context) {
     console.log("connecting to document.....");
 
     const estates = await Insert.find({ _id: id }).select(
-      "_id title price image slug  desc"
+      "_id title price image slug desc agent location createdAt"
     );
     if (estates) {
       console.log(estates);
@@ -24,12 +27,28 @@ export async function getServerSideProps(context) {
     console.log(estates);
     return {
       props: { estates: JSON.parse(JSON.stringify(estates)) },
+    
     };
   } catch (error) {
     //errorHandler(error, res);
+   
   }
 }
-const Desc = ({ estates }) => {
+
+
+
+const Info = ({ estates }) => {
+
+    const session = useSession();
+    const {status,data} = useSession();
+    useEffect(() => {
+    if(status==="unauthenticated") Router.replace("/auth/signin");
+    },[status]);
+  
+    //console.log(session)
+    if (status==="authenticated")
+
+
   return (
     <div className="w-full h-full max-w-[1240px] ">
       {estates.map((estate) => (
@@ -46,6 +65,8 @@ const Desc = ({ estates }) => {
           />
 
           <div className="p-2 text-[#e5e7eb]  absolute top-[95%] max-w-[1240px] w-full h-full left-[50%] translate-x-[-50%] translate-y-[-50%]">
+           
+            
            
           </div>
         </div>
@@ -70,23 +91,15 @@ const Desc = ({ estates }) => {
               <h2>Description</h2>
               <br />
               <p className="text-2xl">{estate.desc}</p>
-              <h3 className="py-2 mt-8">ID: <span className="text-[#fd7e14]"> {estate._id}</span></h3>
-              <div className="grid grid-cols-2 md:grid-cols-2">
-              <a href="tel:+2349063899239">
-                <button className="px-8 py-2 mt-4 mr-8 bg-[#2b2a2a] text-[#e5e7eb] font-bold rounded mb-3">
-                  Call Us
-                </button>
-              </a>
-              <a href=" https://wa.me/+2349063899239">
-                <button className="px-8 py-2 mt-4 mr-8 bg-[#2b2a2a] text-[#e5e7eb] font-bold rounded mb-3">
-                  Chat Us
-                </button>
-              </a>
-              </div>
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mt-8">
+              <h3 className="p-2">TITLE: <span className="text-[#fd7e14]">{estate.title}</span></h3>
+              <h3 className="p-2">AGENT:<span className="text-[#fd7e14]"> {estate.agent}</span></h3>
+              <h3 className="p-2">LOCATION: <span className="text-[#fd7e14]">{estate.location}</span></h3>
+              <h3 className="p-2">PRICE:<span className="text-[#fd7e14]"> {estate.price}</span></h3>
+              <h3 className="p-2">KEY: <span className="text-[#fd7e14]">{estate.slug}</span></h3>
+              <h3 className="p-2">DATE: <span className="text-[#fd7e14]">{estate.createdAt}</span></h3>
 
-              {/* <Link href="/#project">
-                <p className="underline cursor-pointer">Back</p>
-              </Link> */}
+              </div>
             </div>
           ))}
         </div>
@@ -95,4 +108,14 @@ const Desc = ({ estates }) => {
   );
 };
 
-export default Desc;
+export default Info;
+
+Info.getLayout = function pageLayout(page) {
+    return (
+      <>
+        <Dashnav/>
+        {page}
+      
+      </>
+    );
+  };

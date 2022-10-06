@@ -138,7 +138,7 @@ const Dashnav = () => {
               
             </ul>
             <div className="pt-20 ">
-              <p className="uppercase tracking-widest text-[#fd7e14]" onClick={() => signOut()}>
+              <p className="uppercase tracking-widest text-[#fd7e14] hover:cursor-pointer" onClick={() => signOut()}>
                 Log-Out
               </p>
             </div>
