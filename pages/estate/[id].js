@@ -37,7 +37,7 @@ const Estate = ({ estates }) => {
     <div id="rent" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16 justify-center">
 
-        <div className="grid rows-3 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+        <div className="grid rows-3 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {estates.map((estate) => (
             <div
               className="  relative group hover:bg-gradient-to-r from-[#e5e7eb] to-[#1e1e20] opacity-1 bg-[#e5e7eb] shadow-gray-600 rounded-xl overflow-hidden shadow-xl"
