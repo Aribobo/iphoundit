@@ -12,11 +12,15 @@ export const config = {
     bodyParser: false,
   },
 };
+const maxSize  = 9 * 1024 * 1024
 
 const upload = multer({
   storage: multer.diskStorage({}),
   fileFilter: function (req, file, cb) {
     const ext = path.extname(file.originalname);
+
+    limits: {fileSize: maxSize}
+    
     if (ext !==".jpg" && ext!==".jpeg"){
 
     cb( new Error("file type is not supported"),false);
@@ -24,6 +28,7 @@ const upload = multer({
     }
    cb(null, true);
   },
+
 });
 
 
