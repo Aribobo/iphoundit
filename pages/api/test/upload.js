@@ -24,9 +24,12 @@ const upload = multer({
     cb( new Error("file type is not supported"),false);
     return;
     }
+   
    cb(null, true);
-  },
+   
    limits: {fileSize: maxSize}
+  },
+   
 });
 
 
