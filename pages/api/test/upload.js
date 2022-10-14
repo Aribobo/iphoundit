@@ -18,6 +18,8 @@ const upload = multer({
   storage: multer.diskStorage({}),
   fileFilter: function (req, file, cb) {
     const ext = path.extname(file.originalname);
+    
+    limits: {fileSize: maxSize}
 
     if (ext !==".jpg" && ext!==".jpeg"){
 
@@ -26,8 +28,8 @@ const upload = multer({
     }
    
    cb(null, true);
+
    
-   limits: {fileSize: maxSize}
   },
    
 });
@@ -51,6 +53,7 @@ const handler = nc({
 })
   .use(
     upload.single("image")
+    
      
   )
   .post(async (req, res) => {
