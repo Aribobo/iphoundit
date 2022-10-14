@@ -50,7 +50,7 @@ const Navbar = () => {
             </Link>
         <div>
           <ul style={{ color: `${LinkColor}` }} className="hidden md:flex">
-          <Link href="/estate/House">
+          <Link href="#">
               <li className="ml-10 text-sm uppercase hover:border-b">House</li>
             </Link>
             <Link href="/estate/Rent">
@@ -59,7 +59,7 @@ const Navbar = () => {
             <Link href="/estate/Land">
               <li className="ml-10 text-sm uppercase hover:border-b">Land </li>
             </Link>
-            <Link href="/estate/Shop">
+            <Link href="#">
               <li className="ml-10 text-sm uppercase hover:border-b">Shop</li>
             </Link>
             <Link href="/#about">
@@ -112,7 +112,7 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-            <Link href="/estate/House">
+            <Link href="#">
                 <li className="py-4 text-md" onClick={() => setNav(false)}>
                   House
                 </li>
@@ -127,7 +127,7 @@ const Navbar = () => {
                   Land
                 </li>
               </Link>
-              <Link href="/estate/Shop">
+              <Link href="#">
               <li className="py-4 text-md" onClick={() => setNav(false)}>Shop</li>
             </Link>
               <Link href="/#about">
