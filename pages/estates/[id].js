@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import{useSession} from "next-auth/react"
 import Router from 'next/router';
-
 import { connectMongo } from "../../utils/connectMongo";
 import Insert from "../../models/upload";
 
@@ -132,7 +131,7 @@ const Estates = ({ estates }) => {
           }
         } catch (e) {
           setLoader(false);
-          Swal.fire("Good job!", "You clicked the button!", "question");
+          Swal.fire("Error!", "Something is Broken!", "question");
         }
       }
     });
