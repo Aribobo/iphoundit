@@ -11,7 +11,7 @@ const Footer = () => {
 		<>
 			<div  id="footer"className=" shadow-xl
         shadow-gray-400 rounded  bg-[#e5e7eb] h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20">
-				<div className="p-5 ">
+				<div className="p-2 ">
 					<ul><Link href="/#home">
 						<p className="text-gray-800 font-bold text-3xl pb-6">
 							Iphound<span className="text-[#fd7e14]">It</span>
@@ -25,7 +25,7 @@ const Footer = () => {
 						</div>
 					</ul>
 				</div>
-				<div className="p-5">
+				<div className="p-2">
 					<ul>
 						<p className=" font-bold text-2xl pb-4 text-[#fd7e14]">PROPERTIES</p>
 						<Link href="/estate/Land">
@@ -50,18 +50,18 @@ const Footer = () => {
 						</Link>
 					</ul>
 				</div>
-				<div className="p-5">
+				<div className="p-2">
 					<ul>
 						<p className="font-bold text-2xl pb-4 text-[#fd7e14]">CONTACT</p>
 						<li className="text-gray-700 text-xl  font-semibold py-2 flex ">
 						+2349063899239
 						
 						</li>
-						<li className="text-gray-700 text-xl  font-semibold py-2 flex ">
+						{/* <li className="text-gray-700 text-xl  font-semibold py-2 flex ">
 						No 56 Ibagwa Road Nsukka 
-						</li>
+						</li> */}
 						<li className="text-gray-700 text-xl  font-semibold py-2 flex ">
-						iphoundit@gmail.com
+						iphounditonline@gmail.com
 						</li>
 						
 					</ul>
