@@ -57,11 +57,11 @@ const Footer = () => {
 						+2349063899239
 						
 						</li>
-						<li className="text-gray-700 text-xl  font-semibold py-2 flex ">
+						{/* <li className="text-gray-700 text-xl  font-semibold py-2 flex ">
 						No 56 Ibagwa Road Nsukka 
-						</li>
+						</li> */}
 						<li className="text-gray-700 text-xl  font-semibold py-2 flex ">
-						Stboystan@gmail.com
+						iphounditonline@gmail.com
 						</li>
 						
 					</ul>
