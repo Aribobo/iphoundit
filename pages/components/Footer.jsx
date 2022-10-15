@@ -38,12 +38,12 @@ const Footer = () => {
 							House For Rent
 						</li>
 						</Link>
-						<Link href="/estate/Shop">
+						<Link href="#">
 						<li className="text-gray-700 text-xl pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
 							Shop To Let
 						</li>
 						</Link>
-						<Link href="/estate/House">
+						<Link href="#">
 						<li className="text-gray-700 text-xl pb-2 font-semibold hover:text-[#fd7e14] cursor-pointer">
 							House For Sale
 						</li>
