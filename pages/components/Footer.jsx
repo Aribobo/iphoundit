@@ -20,8 +20,10 @@ const Footer = () => {
 						<div className="flex gap-6 pb-5">
 							<FaFacebook className="text-3xl cursor-pointer hover:text-blue-700" />
 							<FaTwitter className="text-3xl cursor-pointer hover:text-blue-600" />
+							<a href=" https://wa.me/+2349063899239">
 							<FaWhatsapp className="text-3xl cursor-pointer hover:text-green-700" />
-							{/* <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" /> */}
+							</a>
+						
 						</div>
 					</ul>
 				</div>
