@@ -43,7 +43,7 @@ const Estate = ({ estates }) => {
               className="  relative group hover:bg-gradient-to-r from-[#e5e7eb] to-[#1e1e20] opacity-1 bg-[#e5e7eb] shadow-gray-600 rounded-xl overflow-hidden shadow-xl"
               key={estate._id}
             >
-              <Link href={`/desc/${estate._id}`}>
+             
                 <Image
                   className="w-full shadow 
                  group-hover:opacity-10 object-fill hover:scale-105 ease in duration-300 md:object-fill cursor-pointer"
@@ -52,7 +52,7 @@ const Estate = ({ estates }) => {
                   width={900}
               height={600} 
                 />
-              </Link>
+             
               <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
       
         <Link href={`/desc/${estate._id}`}>

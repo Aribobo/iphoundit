@@ -10,7 +10,7 @@ const Rent = () => {
           <Rentitems
             title="House For Sale"
             backgroundImg="house.jpg"
-            projectUrl="estate/House"
+            projectUrl="#"
           
           />
           <Rentitems
@@ -22,7 +22,7 @@ const Rent = () => {
           <Rentitems
             title="Shop To Let"
             backgroundImg="shop.jpg"
-            projectUrl="estate/Shop"
+            projectUrl="#"
            
           />
            <Rentitems
