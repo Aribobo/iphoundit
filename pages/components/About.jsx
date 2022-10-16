@@ -31,7 +31,7 @@ const About = () => {
           </p>
       
             <p className="py-2 text-gray-800 underline cursor-pointer">
-            <a href="mailto:stboystan@gmail.com"> Contact us for something unique</a>
+            <a href="mailto:iphounditonline@gmail.com"> Contact us for something unique</a>
             </p>
           
         </div>
