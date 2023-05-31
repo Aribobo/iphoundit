@@ -10,7 +10,7 @@ const Rent = () => {
         <div className="grid grid-cols sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2  items-center gap-8 w-full h-full ">
           <Rentitems
             title="House For Sale"
-            backgroundImg="house.jpg"
+            backgroundImg="heroll.jpg"
             projectUrl="house/House"
           />
           <Rentitems

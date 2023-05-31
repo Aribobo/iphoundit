@@ -158,6 +158,11 @@ const Navbar = () => {
                   Shop
                 </li>
               </Link>
+              <Link href="/shd/Shd">
+              <li className="py-4 text-md" onClick={() => setNav(false)}>
+                  2HD
+                </li>
+              </Link>
               <Link href="/estate/about">
                 <li className="py-4 text-md" onClick={() => setNav(false)}>
                   About
