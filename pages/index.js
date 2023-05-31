@@ -1,8 +1,8 @@
 import Head from 'next/head'
-
-import About from './components/About'
+import Stats from './components/Stats'
 import Main from './components/Main'
 import Rent from './components/Rent'
+import Testimonial from './components/Testimonial'
 
 export default function Home() {
   return (
@@ -17,7 +17,8 @@ export default function Home() {
      </Head>
      <Main/>
      <Rent/>
-     <About/>
+     <Testimonial></Testimonial>
+     <Stats/>
     </div>
   )
 }

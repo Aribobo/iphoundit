@@ -64,7 +64,7 @@ const Desc = ({ estates }) => {
             />
           </div>
         ))}
-        <div className="max-w-[1240px] max-auto p-2 grid md:grid-cols-2 gap-6 pt-20 px-4">
+        <div className="max-w-[1240px] max-auto p-2 grid md:grid-cols-2 gap-6 pt-2 px-4">
           {estates.map((estate) => (
             <div className="col-span-4" key={estate._id}>
               <h2>Description</h2>

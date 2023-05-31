@@ -68,6 +68,9 @@ const Dashnav = () => {
             <Link href="/estates/Shop">
               <li className="ml-10 text-sm uppercase hover:border-b">Shop</li>
             </Link>
+            <Link href="/estates/Shd">
+              <li className="ml-10 text-sm uppercase hover:border-b">2hd</li>
+            </Link>
           
               <li className="ml-10 text-sm uppercase hover:border-b" onClick={() => signOut()}>
                 Log-Out
@@ -134,6 +137,13 @@ const Dashnav = () => {
                   Shop
                 </li>
               </Link>
+              <Link href="/estates/Shd">
+                <li className="py-4 text-md" onClick={() => setNav(false)}>
+                  2hd
+                </li>
+              </Link>
+              
+              
               
             </ul>
             <div className="pt-20 ">

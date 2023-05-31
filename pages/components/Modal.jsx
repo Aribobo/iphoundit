@@ -3,7 +3,6 @@ import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 const Modal = ({ open, onClose }) => {
- 
   // const [image, setImage] = useState(null);
   const [imageInput, setImageInput] = useState(null);
   const [title, setTitle] = useState("");
@@ -14,7 +13,6 @@ const Modal = ({ open, onClose }) => {
   const [desc, setDesc] = useState("");
   const [category, setCategory] = useState("");
   const [loading, setLoader] = useState(false);
-  
 
   const handleImage = (e) => {
     const file = e.target.files[0];
@@ -50,7 +48,6 @@ const Modal = ({ open, onClose }) => {
       if (result) {
         setLoader(false);
         Swal.fire("Good job!", "Uploaded Succesfully", "success");
-        
       }
       console.log({ result });
     } catch (error) {
@@ -58,7 +55,7 @@ const Modal = ({ open, onClose }) => {
       console.log(error);
     }
   };
-if (!open) return null;
+  if (!open) return null;
   return (
     <div id="skills" className="w-full lg:h-screen p-2 ">
       <div className="max-w-[800px] mx-auto flex flex-col justify-center text-center h-full mt-20">
@@ -149,7 +146,7 @@ if (!open) return null;
                 type="submit"
                 className=" bg-green-700 w-full p-4 text-gray-100 mt-4"
               >
-               {loading ? "Uploading...." : "Upload"} 
+                {loading ? "Uploading...." : "Upload"}
               </button>
             </form>
           </div>
