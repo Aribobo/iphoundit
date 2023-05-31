@@ -55,7 +55,7 @@ const Shd = ({ estates }) => {
             >
              
                 <Image
-                  className="w-full shadow 
+                  className="w-full h-full shadow 
                  group-hover:opacity-10 object-fill hover:scale-105 ease in duration-300 md:object-fill cursor-pointer"
                   src={estate.image}
                   alt=" "
