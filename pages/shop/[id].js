@@ -42,10 +42,10 @@ const Shop = ({ estates }) => {
     <div id="rent" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16 justify-center">
       <div className="flex items-center justify-center mt-8 ">
-      <h2 className="text-xl md:text-2xl mt-4  uppercase p-2"> Available Shops</h2>
+      <h2 className="text-xl md:text-2xl mt-2  uppercase p-2"> Available Shops</h2>
           
         </div>
-        <div className="grid grid-cols md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <div className="grid grid-cols md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
           {estates.map((estate) => (
             <div
               className=" 

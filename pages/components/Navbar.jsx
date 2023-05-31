@@ -138,7 +138,7 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col overflow-y-scroll">
             <ul className="uppercase">
-              <Link href="house/House">
+              <Link href="/house/House">
                 <li className="py-4 text-md" onClick={() => setNav(false)}>
                   House
                 </li>
