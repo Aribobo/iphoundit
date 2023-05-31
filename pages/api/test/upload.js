@@ -20,7 +20,7 @@ const upload = multer({
 
   fileFilter: function (req, file, cb) {
     const ext = path.extname(file.originalname);
-    if (ext !==".jpg" && ext!==".jpeg"){
+    if (ext !==".png" && ext !==".jpg" && ext!==".jpeg"){
 
     cb( new Error("file type is not supported"),false);
     return;
