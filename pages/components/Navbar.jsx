@@ -170,11 +170,13 @@ const Navbar = () => {
               </Link>
             </ul>
             <br />
-            <p className="py-4 text-2xl">Connect with us</p>
+            <p className="py-4 text-2xl text-[#fd7e14]">Connect with us</p>
           </div>
 
           <div className="flex gap-6 pb-5 justify-start items-center">
+            <a href="https://www.facebook.com/profile.php?id=100093083571109">
             <FaFacebook className=" flex text-3xl cursor-pointer hover:text-blue-700" />
+            </a>
             <a href="mailto:iphounditonline@gmail.com">
               <AiOutlineMail className=" flex text-3xl cursor-pointer hover:text-[#fd7e14]" />
             </a>

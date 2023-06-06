@@ -28,7 +28,9 @@ const Howto = () => {
           </p>
           <h3 className="py-2">CONTACT-US</h3>
           <div className="flex gap-6 pb-5 justify-start items-center">
+          <a href="https://www.facebook.com/profile.php?id=100093083571109">
 							<FaFacebook className=" flex text-3xl cursor-pointer hover:text-blue-700" />
+              </a>
                             <a href="mailto:iphounditonline@gmail.com">
                                 <AiOutlineMail className=" flex text-3xl cursor-pointer hover:text-[#fd7e14]" />
                                 </a>
