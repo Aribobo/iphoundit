@@ -5,6 +5,7 @@ import nProgress from "nprogress";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { SessionProvider } from "next-auth/react";
+import {Analytics} from '@vercel/analytics/react';
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
     return Component.getLayout(
       <SessionProvider session={pageProps.session}>
         <Component {...pageProps} />
+        <Analytics />
       </SessionProvider>
     );
   }

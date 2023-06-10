@@ -77,7 +77,7 @@ const Estate = ({ estates }) => {
                   {" "}
                   <ImPriceTag size={30} /> ₦{estate.price}
                 </p>
-                <p className="text-bold text-black pb-2 flex justify-center text-2xl">
+                <p className="text-bold text-black pb-2 flex justify-center text-xl">
                   <FaBed size={30} /> {estate.title}
                 </p>
                 <p className="pb-2 flex justify-center text-black text-xl">
