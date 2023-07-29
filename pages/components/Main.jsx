@@ -3,13 +3,13 @@ import Image from "next/image";
 const Main = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1350px] w-full h-full mx-auto p-2 flex justify-center items-center bg-cover lg-center relative">
+      <div className="max-w-[2560px] w-full h-full mx-auto p-2 flex justify-center items-center bg-cover lg-center relative">
         <img
           src="/nero2.jpg"
           className="absolute  object-cover w-full h-full"
           alt=""
           height={750}
-          width={1600}
+          width={2560}
         />
         <div className="text-[#eee3bc] absolute">
           <h1 className="py-4 text[#eae7dc] ">
